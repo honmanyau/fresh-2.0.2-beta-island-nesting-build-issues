@@ -1,6 +1,6 @@
 import type { Signal } from "@preact/signals";
-import { Button } from "../components/Button.tsx";
-import { GlobalIsland } from "./GlobalIsland.tsx";
+import { Button } from "../../components/Button.tsx";
+import { ColocatedIsland } from "./ColocatedIsland.tsx";
 
 interface CounterProps {
   count: Signal<number>;
@@ -12,7 +12,7 @@ export default function Counter(props: CounterProps) {
       <Button id="decrement" onClick={() => props.count.value -= 1}>-1</Button>
       <p class="text-3xl tabular-nums">{props.count}</p>
       <Button id="increment" onClick={() => props.count.value += 1}>+1</Button>
-      <GlobalIsland />
+      <ColocatedIsland />
     </div>
   );
 }
